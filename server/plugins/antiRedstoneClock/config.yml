@@ -1,0 +1,44 @@
+version: 0.9
+metrics: false
+MaxPulses: 150
+Delay: 300
+NotifyAdmins: true
+DropItems: false
+CreateSignWhenClockIsBreak: false
+Sign:
+  Line1: ''
+  Line2: Way too
+  Line3: many ticks
+  Line4: ''
+IgnoreWorlds: redstoneWorld/survival
+IgnoreRegions: redstone/admins
+plotSquaredSupport: false
+worldGuardSupport: false
+checkedClock:
+  comparator: true
+  observer: true
+  piston: true
+  redstoneAndRepeater: true
+AutomaticallyBreakDetectedClock: true
+SummonLigthningAtRedstoneLocation: false
+teleportCMD: tp $x $y $z $world
+checkTPS:
+  minimumTPS: -1
+  maximumTPS: 17
+  intervalInSecond: 60
+disableRedstoneClockCheckAbove: 255
+Msg:
+  default:
+    prefix: '&5•&7 '
+    error: '&5•&7 '
+    no_permission: No permission
+    command_use: /arc $command
+  message:
+    MsgToAdmin: Disabled clock @ x:$X y:$Y Z:$Z $World
+    unknownCmd: Unknown command. Type "/help" for help.
+    reloadSuccess: Reloaded
+    newValueInConfig: The new value of $setting is $value
+    RedStoneClockListHeader: 'RedstoneClockList: $page'
+    RedStoneClockListFooter: ''
+  Exception:
+    duplicate_object: This list already contains this redstone
