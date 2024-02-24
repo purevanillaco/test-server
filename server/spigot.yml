@@ -39,7 +39,6 @@ settings:
   restart-script: ./start.sh
   save-user-cache-on-stop-only: false
   sample-count: 12
-  bungeecord: true
   player-shuffle: 0
   user-cache-size: 1000
   moved-wrongly-threshold: 0.0625
