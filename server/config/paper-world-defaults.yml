@@ -39,6 +39,9 @@ anticheat:
     - emerald_ore
     - deepslate_emerald_ore
     - ender_chest
+    - ancient_debris
+    - nether_gold_ore
+    - nether_quartz_ore
     lava-obscures: false
     max-block-height: 64
     replacement-blocks:
