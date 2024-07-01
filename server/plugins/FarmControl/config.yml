@@ -2,7 +2,7 @@
 # GitHub: https://github.com/froobynooby/FarmControl
 
 # Please don't change this!
-version: 7
+version: 9
 
 # Every how many ticks should we run the profile check / action cycle?
 cycle-period: 600
@@ -39,6 +39,7 @@ world-settings:
         - nerf-small-animal-farms
         - trim-monsters
         - soft-nerf-monsters
+
       #  - freeze-animal-farms
 
     # These settings concern the reactive mode for triggering profile check / action cycles.
@@ -64,6 +65,7 @@ world-settings:
         #  * If an entity type is not specified, the value under default will be used.
         entity-undo-weight:
           default: 1
+
           villager: 5
 
     # These settings concern when we should exclude a mob from having actions applied to them.
@@ -82,6 +84,12 @@ world-settings:
 
       # Should we not perform actions on patrol leaders?
       patrol-leader: false
+
+      # Should we not perform actions on projectiles that can be picked up by a player?
+      pickupable: true
+
+      # Should we not perform actions on mobs that are mounted (e.g. a boat with a villager in it)?
+      mounted: true
 
       # Should we not perform actions on mobs that are younger than this value (in ticks)?
       younger-than: 0
