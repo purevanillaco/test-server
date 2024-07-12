@@ -45,10 +45,10 @@ world-settings:
     # These settings concern the reactive mode for triggering profile check / action cycles.
     reactive-mode-settings:
       # Above what MSPT should the reactive mode be triggered?
-      trigger-mspt-threshold: 90.0
+      trigger-mspt-threshold: 65.0
 
       # Below what MSPT should the reactive mode be untriggered, and actions undone?
-      untrigger-mspt-threshold: 70.0
+      untrigger-mspt-threshold: 45.0
 
       # These settings concern how the plugin should handle undoing actions performed on mobs once the reactive mode has
       # been untriggered.
