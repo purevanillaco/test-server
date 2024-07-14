@@ -3,7 +3,7 @@
 max-speed: 1.7
 
 # How many ticks should rockets be nerfed for after using them. Multiply seconds by 20 to get ticks: 3 x 20 = 60
-rocket-cooldown-ticks: 60
+rocket-cooldown-ticks: 0
 
 # Dynamic speed based on tps
 dynamic-speed:
