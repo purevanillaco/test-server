@@ -15,15 +15,15 @@
 
 stack:
   # The maximum size that a stack can have.
-  max-size: 30
+  max-size: 7
   # How often entities should be checked for stacking (in ticks. 20 ticks = 1 second) (*)
   interval: 100
   # The area around an entity for which applicable stacks should be found.
   # Format: [(x cord),(y cord),(z cord)]
   merge-range:
-  - 10
-  - 10
-  - 10
+    - 10
+    - 10
+    - 10
   # Only begin to stack entities when this amount of entities are nearby.
   threshold:
     enabled: true
@@ -39,7 +39,7 @@ stack:
   # Stack entities when they spawn. (*)
   on-spawn: false
   # Only stack when two stacks can directly see each other
-  line-of-sight: true
+  line-of-sight: false
   # What should be done if a nametagged entity is removed when stacking?
   # DROP - drop a nametag
   # JOIN - make it so that the value of the nametag is added to the remaining entity
@@ -53,14 +53,14 @@ worlds-blacklist: []
 worlds-blacklist-invert: false
 # Types of entity which should not stack (3) (***)
 types-blacklist:
-- VILLAGER
-- WATER
-- RAIDER
+  - VILLAGER
+  - WATER
+  - RAIDER
 types-blacklist-invert: false
 # If the entity's spawn reason is listed below, do not stack. (2)
 reason-blacklist:
-- SHOULDER_ENTITY
-- NATURAL
+  - SHOULDER_ENTITY
+  - NATURAL
 reason-blacklist-invert: false
 
 display-name:
@@ -69,7 +69,7 @@ display-name:
   # Placeholders:
   # %type% - the entity's type
   # %size% - the size of the stack
-  format: '&#778899(%size%)'
+  format: "&#778899%size%"
   # Whether the display tag can only be seen when the player targets the entity.
   # Mode:
   # ALWAYS - The tag will always be visible as long as the entity is loaded.
@@ -81,9 +81,9 @@ display-name:
     # The range from which the tag should be visible.
     # Format: [(x cord),(y cord),(z cord)]
     range:
-    - 12
-    - 6
-    - 12
+      - 12
+      - 6
+      - 12
     # How often (in ticks) the tag visibility status of an entity should be updated. (20 ticks = 1 second)
     interval: 50
     # Perform a ray trace, meaning that the tag is only visible if there are no occluding blocks.
@@ -226,24 +226,28 @@ death:
   # The priority 1 is highest and 4 is lowest.
   # If the killed entity is blacklisted, either by type, spawn reason or death reasons (the last damage cause),
   # by the highest priority method, then we will attempt to use the next highest priority death method.
-  SINGLE:
-    priority: 2
-    reason-blacklist: []
-    reason-blacklist-invert: false
-    spawn-reason-blacklist: []
-    spawn-reason-blacklist-invert: false
-    type-blacklist: []
-    type-blacklist-invert: false
   ALL:
-    priority: 3
-    reason-blacklist: []
-    reason-blacklist-invert: false
+    priority: 1
+    reason-blacklist:
+      - FALL
+      - CRAMMING
+      - HOT_FLOOR
+      - CAMPFIRE
+      - CONTACT
+      - FIRE
+      - FIRE_TICK
+      - FREEZE
+      - KILL
+      - SUFFOCATION
+      - VOID
+      - WORLD_BORDER
+    reason-blacklist-invert: true
     spawn-reason-blacklist: []
     spawn-reason-blacklist-invert: false
     type-blacklist: []
     type-blacklist-invert: false
   STEP:
-    priority: 1
+    priority: 2
     reason-blacklist: []
     reason-blacklist-invert: false
     spawn-reason-blacklist: []
@@ -252,6 +256,14 @@ death:
     type-blacklist-invert: false
     max-step: 5
     min-step: 1
+  SINGLE:
+    priority: 3
+    reason-blacklist: []
+    reason-blacklist-invert: false
+    spawn-reason-blacklist: []
+    spawn-reason-blacklist-invert: false
+    type-blacklist: []
+    type-blacklist-invert: false
   # This mode is kind of buggy, especially when custom mob plugins are used.
   STEP_DAMAGE:
     priority: 4
@@ -300,21 +312,21 @@ wait-to-stack:
   wait-time: 5
   # Entity types that this should work for. (3) (***)
   types-whitelist:
-  - ZOMBIE
-  - SKELETON
-  - ZOMBIFIED_PIGLIN
-  - CREEPER
-  - ENDERMAN
+    - ZOMBIE
+    - SKELETON
+    - ZOMBIFIED_PIGLIN
+    - CREEPER
+    - ENDERMAN
   types-whitelist-invert: false
   # Spawn reasons that this should work for. (2)
   reasons-whitelist:
-  - SPAWNER
+    - SPAWNER
   reasons-whitelist-invert: false
 
 # Enable/disable integration with other plugins. (*)
 hooks:
   # Allows the custom 'entity-stacking' flag to be used in worldguard regions.
-  worldguard: true
+  worldguard: false
   mythicmobs:
     stack: false
     # Blacklist of MythicMob types (uses the internal name)
@@ -324,12 +336,12 @@ hooks:
     # When this option is enabled, MythicMobs will not stack.
     prevent-stack: true
   # Prevent citizens npcs from stacking.
-  citizens: true
+  citizens: false
   # Prevent stacked entities from giving mcmmo experience.
-  mcmmo: true
+  mcmmo: false
   # Options relating to the Jobs Reborn plugin
   jobs:
-    enabled: true
+    enabled: false
     # Modes:
     # PREVENT - Do not give Jobs rewards for stacked mobs.
     # IGNORE - Make it so StackMob doesn't touch Jobs.
@@ -340,7 +352,7 @@ hooks:
   # Make it so that ClearLagg removes stacked entities.
   clearlagg: false
   # Make it so that MyPet pets do not stack.
-  mypet: true
+  mypet: false
 
 # Enable the system based on MSPT. The MSPT will be updated as often as stack.interval
 mspt-reactive:
@@ -349,7 +361,6 @@ mspt-reactive:
   trigger-mspt-threshold: 65.0
   # Below what MSPT should the reactive mode be untriggered?
   untrigger-mspt-threshold: 45.0
-
 # # Some options can be modified for specific entity types. An example is shown below. Remove comments to see this in action.
 # # Options and sections with a (*) in the comment preceding cannot be overridden.
 # custom:
@@ -364,3 +375,14 @@ mspt-reactive:
 #    # The cloned custom options can still be overridden.
 #    stack:
 #      max-size: 5
+custom:
+  ENDERMAN:
+    stack:
+      max-size: 30
+  GUARDIAN:
+    stack:
+      merge-range:
+        - 50
+        - 50
+        - 50
+      max-size: 200
