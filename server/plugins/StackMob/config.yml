@@ -56,6 +56,8 @@ types-blacklist:
   - VILLAGER
   - WATER
   - RAIDER
+  - PIGLIN
+  - PIGLIN_BRUTE
 types-blacklist-invert: false
 # If the entity's spawn reason is listed below, do not stack. (2)
 reason-blacklist:
