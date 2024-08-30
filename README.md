@@ -4,9 +4,9 @@ don't exepct a reply to any of your questions about how to run this test server.
 
 # this is licensed content
 ### TL;DR - you are not allowed to make your own monetized server from the setup on this repo
-[![image](https://mirrors.creativecommons.org/presskit/icons/cc.svg)](https://mirrors.creativecommons.org/presskit/icons/cc.svg)
-[![image](https://mirrors.creativecommons.org/presskit/icons/by.svg)](https://mirrors.creativecommons.org/presskit/icons/by.svg)
-[![image](https://mirrors.creativecommons.org/presskit/icons/nc.svg)](https://mirrors.creativecommons.org/presskit/icons/nc.svg)
+[![image](https://mirrors.creativecommons.org/presskit/icons/cc.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![image](https://mirrors.creativecommons.org/presskit/icons/by.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![image](https://mirrors.creativecommons.org/presskit/icons/nc.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 # how to run the server?
 1. first, click on the branch you are looking for (simply, cool, etc) on the branch selector (appears as "main" by default)
