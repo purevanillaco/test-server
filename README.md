@@ -1,5 +1,5 @@
 # before you make any questions
-don't exepct a reply to any of your questions about how to run this test server. you are on your own. you can find out how to run a minecraft server on google or just google any of the issues/questions you have, or ask chatgpt. this video tutorial should guide you pretty good on how to setup everything:
+don't expect a reply to any of your questions about how to run this test server. you are on your own. you can find out how to run a minecraft server on google or just google any of the issues/questions you have, or ask chatgpt. this video tutorial should guide you pretty good on how to setup everything:
 [![image](https://github.com/user-attachments/assets/a363c04c-9e26-4a41-9d48-0e1c745ce69b)](https://youtu.be/di6s3Q7b_vg)
 
 # this is licensed content
