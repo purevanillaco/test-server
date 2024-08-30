@@ -5,7 +5,7 @@ don't exepct a reply to any of your questions about how to run this test server.
 # this is licensed content
 ### TL;DR - you are not allowed to make your own monetized server from the setup on this repo
 [![image](https://mirrors.creativecommons.org/presskit/icons/cc.svg)](https://mirrors.creativecommons.org/presskit/icons/cc.svg)
-[![image](https://mirrors.creativecommons.org/presskit/icons/cc.svg)](https://mirrors.creativecommons.org/presskit/icons/by.svg)
+[![image](https://mirrors.creativecommons.org/presskit/icons/by.svg)](https://mirrors.creativecommons.org/presskit/icons/by.svg)
 [![image](https://mirrors.creativecommons.org/presskit/icons/nc.svg)](https://mirrors.creativecommons.org/presskit/icons/nc.svg)
 
 # how to run the server?
