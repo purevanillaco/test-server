@@ -1,0 +1,76 @@
+# Please visit https://github.com/froobynooby/FarmControl/wiki/Profiles for help with making profiles.
+
+profiles:
+  # Remove random movements and disable collisions of mobs in animal farms
+  nerf-small-animal-farms:
+    group:
+      types:
+        - "category:animal"
+      count: 20
+      distance: 5
+    actions:
+      - remove-random-movement
+      - disable-collisions
+
+  # Remove the awareness of mobs in animal farms
+  nerf-large-animal-farms:
+    group:
+      types:
+        - "category:animal"
+      count: 20
+      distance: 5
+    actions:
+      - remove-awareness
+      - disable-collisions
+
+  # Remove the AI of mobs in animal farms
+  nerf-xl-animal-farms:
+    group:
+      types:
+        - "category:animal"
+      count: 35
+      distance: 5
+    actions:
+      - remove-ai
+      - disable-collisions
+
+  # Disable breeding in villager farms containing 20 or more villagers
+  soft-limit-villager-breeders:
+    group:
+      types:
+        - "villager"
+      count: 40
+      distance: 10
+    actions:
+      - disable-breeding
+
+  # No more than 20 animals (all of the same type) within close proximity
+  trim-animal-farms:
+    group:
+      types:
+        - "category:animal"
+      count: 60
+      distance: 5
+      pure: true
+    actions:
+      - kill
+
+  soft-nerf-monsters:
+    group:
+      types:
+        - "category:monster"
+      count: 35
+      distance: 15
+    actions:
+      - remove-random-movement
+      - disable-collisions
+
+  trim-monsters:
+    group:
+      types:
+        - "category:monster"
+      count: 50
+      distance: 100
+      pure: true
+    actions:
+      - kill
