@@ -103,11 +103,11 @@ world-settings:
       tick-inactive-villagers: true
       ignore-spectators: false
     entity-tracking-range:
-      players: 192
+      players: 64
       animals: 48
       monsters: 48
       misc: 32
-      display: 128
+      display: 64
       other: 64
     ticks-per:
       hopper-transfer: 8
