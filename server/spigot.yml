@@ -33,6 +33,7 @@ commands:
   log: true
   tab-complete: 0
   send-namespaced: true
+  enable-spam-exclusions: false
 settings:
   timeout-time: 60
   restart-on-crash: false

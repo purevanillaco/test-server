@@ -1,4 +1,4 @@
-# StackMob 5.9.0 Configuration file - by antiPerson and contributors.
+# StackMob 5.10.0 Configuration file - by antiPerson and contributors.
 # If the comments have been removed, you can find a version with comments at https://github.com/Nathat23/StackMob-5/tree/master/src/main/resources
 #
 # Most options can be customised for specific entity types, for details about this, see the end of this file.
@@ -21,9 +21,9 @@ stack:
   # The area around an entity for which applicable stacks should be found.
   # Format: [(x cord),(y cord),(z cord)]
   merge-range:
-    - 10
-    - 10
-    - 10
+  - 10
+  - 10
+  - 10
   # Only begin to stack entities when this amount of entities are nearby.
   threshold:
     enabled: true
@@ -53,16 +53,16 @@ worlds-blacklist: []
 worlds-blacklist-invert: false
 # Types of entity which should not stack (3) (***)
 types-blacklist:
-  - VILLAGER
-  - WATER
-  - RAIDER
-  - PIGLIN
-  - PIGLIN_BRUTE
+- VILLAGER
+- WATER
+- RAIDER
+- PIGLIN
+- PIGLIN_BRUTE
 types-blacklist-invert: false
 # If the entity's spawn reason is listed below, do not stack. (2)
 reason-blacklist:
-  - SHOULDER_ENTITY
-  - NATURAL
+- SHOULDER_ENTITY
+- NATURAL
 reason-blacklist-invert: false
 
 display-name:
@@ -71,7 +71,7 @@ display-name:
   # Placeholders:
   # %type% - the entity's type
   # %size% - the size of the stack
-  format: "&#778899%size%"
+  format: '&#778899%size%'
   # Whether the display tag can only be seen when the player targets the entity.
   # Mode:
   # ALWAYS - The tag will always be visible as long as the entity is loaded.
@@ -83,9 +83,9 @@ display-name:
     # The range from which the tag should be visible.
     # Format: [(x cord),(y cord),(z cord)]
     range:
-      - 12
-      - 6
-      - 12
+    - 12
+    - 6
+    - 12
     # How often (in ticks) the tag visibility status of an entity should be updated. (20 ticks = 1 second)
     interval: 50
     # Perform a ray trace, meaning that the tag is only visible if there are no occluding blocks.
@@ -97,6 +97,8 @@ display-name:
       # Whether the armor stand should be spawned at a fixed offset from the head location.
       # This is useful when other plugins use packets for entity name tags. If the value is 0.0 then this is disabled.
       offset: 0.0
+    # The range from which the tag should be visible.
+    radius: 12
   # Don't show the tag if the stack size of this entity if it is equal to or below the value specified.
   threshold: 1
 
@@ -231,18 +233,18 @@ death:
   ALL:
     priority: 1
     reason-blacklist:
-      - FALL
-      - CRAMMING
-      - HOT_FLOOR
-      - CAMPFIRE
-      - CONTACT
-      - FIRE
-      - FIRE_TICK
-      - FREEZE
-      - KILL
-      - SUFFOCATION
-      - VOID
-      - WORLD_BORDER
+    - FALL
+    - CRAMMING
+    - HOT_FLOOR
+    - CAMPFIRE
+    - CONTACT
+    - FIRE
+    - FIRE_TICK
+    - FREEZE
+    - KILL
+    - SUFFOCATION
+    - VOID
+    - WORLD_BORDER
     reason-blacklist-invert: true
     spawn-reason-blacklist: []
     spawn-reason-blacklist-invert: false
@@ -314,15 +316,15 @@ wait-to-stack:
   wait-time: 5
   # Entity types that this should work for. (3) (***)
   types-whitelist:
-    - ZOMBIE
-    - SKELETON
-    - ZOMBIFIED_PIGLIN
-    - CREEPER
-    - ENDERMAN
+  - ZOMBIE
+  - SKELETON
+  - ZOMBIFIED_PIGLIN
+  - CREEPER
+  - ENDERMAN
   types-whitelist-invert: false
   # Spawn reasons that this should work for. (2)
   reasons-whitelist:
-    - SPAWNER
+  - SPAWNER
   reasons-whitelist-invert: false
 
 # Enable/disable integration with other plugins. (*)
@@ -384,7 +386,7 @@ custom:
   GUARDIAN:
     stack:
       merge-range:
-        - 50
-        - 50
-        - 50
+      - 50
+      - 50
+      - 50
       max-size: 200
